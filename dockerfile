@@ -1,8 +1,8 @@
 ##website installtion
 #FROM mcr.microsoft.com/windows/servercore:10.0.17763.1039-amd64
-FROM mcr.microsoft.com/windows/servercore/iis:20190314-windowsservercore-ltsc2019
+FROM mcr.microsoft.com/windows/servercore/iis:20190409-windowsservercore-ltsc2016
 SHELL ["powershell" ]
-RUN powershell Get-WindowsFeature web-server
+#RUN powershell Get-WindowsFeature web-server
 RUN powershell Install-windowsfeature web-server
 RUN Install-WindowsFeature NET-Framework-45-ASPNET ;    Install-WindowsFeature Web-Asp-Net45 ;
 RUN powershell Add-WindowsFeature Web-Common-Http
