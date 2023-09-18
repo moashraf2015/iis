@@ -1,6 +1,6 @@
 ##website installtion
 #FROM mcr.microsoft.com/windows/servercore:10.0.17763.1039-amd64
-FROM mcr.microsoft.com/windows/servercore/iis:20181113-windowsservercore-1709
+FROM mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2016
 SHELL ["powershell" ]
 #RUN powershell Get-WindowsFeature web-server
 RUN powershell Install-windowsfeature web-server
